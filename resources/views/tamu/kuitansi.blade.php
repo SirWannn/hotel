@@ -9,7 +9,7 @@
 
     <title>Kuitansi Pembayaran - Hotel AMBATUKAM</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
 </head>
 
 <body class="bg-[#F4EFE6] min-h-screen">

@@ -6,7 +6,7 @@
 
     <title>Login - Hotel AMBATUKAM</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
 </head>
 
 <body class="min-h-screen bg-[#F4EFE6] flex items-center justify-center p-6">

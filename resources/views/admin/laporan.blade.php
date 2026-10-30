@@ -7,7 +7,7 @@
 
     <title>Laporan Hotel AMBATUKAM</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <style>

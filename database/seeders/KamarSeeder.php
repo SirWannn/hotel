@@ -9,54 +9,52 @@ class KamarSeeder extends Seeder
 {
     public function run(): void
     {
-        $kamars = [
+        DB::table('kamars')->insert([
             [
                 'nomor_kamar' => '101',
-                'tipe_kamar' => 'Standard Room',
-                'harga' => 350000,
-                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi Pribadi',
+                'tipe_kamar' => 'Standard',
+                'harga' => 300000,
+                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi',
+                'status' => 'tersedia',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'nomor_kamar' => '102',
-                'tipe_kamar' => 'Superior Room',
-                'harga' => 450000,
-                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi Pribadi, Meja Kerja, Ketel Listrik',
+                'tipe_kamar' => 'Standard',
+                'harga' => 300000,
+                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi',
+                'status' => 'tersedia',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'nomor_kamar' => '201',
-                'tipe_kamar' => 'Deluxe Room',
-                'harga' => 600000,
-                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi Pribadi, Kulkas Mini, Meja Kerja',
+                'tipe_kamar' => 'Deluxe',
+                'harga' => 500000,
+                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi, Sarapan',
+                'status' => 'tersedia',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'nomor_kamar' => '202',
-                'tipe_kamar' => 'Junior Suite',
-                'harga' => 900000,
-                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi Pribadi, Tempat Tidur King, Sofa, Ruang Duduk',
+                'tipe_kamar' => 'Deluxe',
+                'harga' => 500000,
+                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi, Sarapan',
+                'status' => 'tersedia',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
                 'nomor_kamar' => '301',
-                'tipe_kamar' => 'Executive Suite',
-                'harga' => 1500000,
-                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi Pribadi, Tempat Tidur King, Ruang Tamu, Sofa, Kulkas Mini',
+                'tipe_kamar' => 'Suite',
+                'harga' => 800000,
+                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi, Sarapan, Ruang Tamu',
+                'status' => 'tersedia',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
-            [
-                'nomor_kamar' => '302',
-                'tipe_kamar' => 'Presidential Suite',
-                'harga' => 2500000,
-                'fasilitas' => 'AC, TV, WiFi, Kamar Mandi Pribadi, Tempat Tidur King, Ruang Tamu Luas, Sofa, Kulkas Mini',
-            ],
-        ];
-
-        foreach ($kamars as $data) {
-            DB::table('kamars')
-                ->where('nomor_kamar', $data['nomor_kamar'])
-                ->update([
-                    'tipe_kamar' => $data['tipe_kamar'],
-                    'harga' => $data['harga'],
-                    'fasilitas' => $data['fasilitas'],
-                    'updated_at' => now(),
-                ]);
-        }
+        ]);
     }
 }
