@@ -7,3 +7,106 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-inline: 1rem !important;
+    }
+
+    nav > div {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        max-width: 100%;
+    }
+
+    nav a {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    main {
+        min-width: 0;
+        padding-inline: 1rem !important;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding-inline: 1rem !important;
+    }
+
+    table {
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    input:not([type='checkbox']):not([type='radio']),
+    select,
+    textarea {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    aside.fixed {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    aside.fixed > nav {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        overflow-x: auto;
+        padding: 0.75rem 1rem !important;
+        white-space: nowrap;
+    }
+
+    aside.fixed > nav > a {
+        flex: 0 0 auto;
+    }
+
+    aside.fixed > nav > :not(:last-child) {
+        margin-top: 0;
+    }
+
+    .ml-64 {
+        margin-left: 0 !important;
+    }
+
+    [class~='text-5xl'] {
+        font-size: 2.25rem;
+        line-height: 1.2;
+    }
+
+    [class~='text-4xl'] {
+        font-size: 1.875rem;
+        line-height: 1.25;
+    }
+
+    [class~='min-h-[500px]'] {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 479px) {
+    [class~='grid-cols-2'] {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    [class~='h-[350px]'] {
+        height: 16rem;
+    }
+}
